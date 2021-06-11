@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>查看所有学生成绩</title>
+
+
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="modules/css/bootstrap.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="modules/jquery-3.2.1.js"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="modules/js/bootstrap.bundle.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="modules/js/bootstrap.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="col-md-12">
+        <h1>查询所有学生成绩</h1>
+        <h4><a href="back">继续添加学生信息</a></h4>
+        <table class="table">
+            <tr>
+                <td>编号</td>
+                <td>学号</td>
+                <td>学生姓名</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>总分</td>
+                <td>操作</td>
+            </tr>
+            <tr th:each="st: ${sts}">
+                <td th:text="${st.id}"></td>
+                <td th:text="${st.email}"></td>
+                <td th:text="${st.username}"></td>
+                <td th:text="${st.password}"></td>
+                <!-- 这里是用theamleaf语法进行href的拼接 -->
+                <td><a th:href="@{deleteStu/{id}(id=${st.id})}">删除</a></td>
+            </tr>
+        </table>
+    </div>
+    <!--<div th:text="${msg}"></div>-->
+</div>
+</body>
+</html>

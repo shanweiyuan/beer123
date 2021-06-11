@@ -19,7 +19,7 @@ public class MailService {
     private JavaMailSender mailSender;//一定要用@Autowired
 
     @Autowired
-    private UserMapper userMapper;//注入UserMapper，交给bema
+    private UserMapper userMapper;//注入UserMapper，交给bean
 
     //application.properties中已配置的值
     @Value("${spring.mail.username}")

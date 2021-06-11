@@ -3,11 +3,10 @@ package com.swy.pojo;
 import lombok.Data;
 
 @Data
-public class User {
+public class Content {
     private Integer id;
     private String username;
-    private String password;
     private String email;
-
-
+    private String title;
+    private String content;
 }

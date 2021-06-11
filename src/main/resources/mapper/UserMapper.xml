@@ -16,6 +16,26 @@
     </select>
 
 
+    <insert id="AddUser" parameterType="com.swy.pojo.User">
+        insert into user (username,password,email)
+        values (#{username},#{password},#{email})
+    </insert>
+
+    <update id="updateUser" parameterType="com.swy.pojo.User">
+        update user
+        set username=#{username},
+            password=#{password}
+        where email = #{email}
+    </update>
+
+    <delete id="deleteInfo" parameterType="int">
+        delete from user where id = #{id}
+    </delete>
+
+    <select id="selectAll" resultType="com.swy.pojo.User">
+        select * from user
+    </select>
+
 
 
 </mapper>
