@@ -1,5 +1,6 @@
 package com.swy.mapper;
 
+import com.swy.pojo.Page;
 import com.swy.pojo.User;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
@@ -64,4 +65,8 @@ public interface UserMapper {
      * @param pages
      */
     void addText(String user, String email,String titles,String pages);
+
+    List<Page> showInfo();
+
+    int deleteMc(int id);
 }

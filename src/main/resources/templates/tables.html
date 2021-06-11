@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>用户信息管理</title>
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -53,9 +53,14 @@
         <li class="nav-item active">
             <a class="nav-link" href="tables">
                 <i class="fas fa-fw fa-table"></i>
-                <span>列表</span></a>
+                <span>用户列表</span></a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="McM">
+                <i class="fas fa-fw fa-table"></i>
+                <span>留言列表</span></a>
+        </li>
 
 
         <!-- Divider -->
@@ -132,16 +137,22 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="给我留言.html">
+            <a class="nav-link" href="charts.html">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>表格图示</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="find.html">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>给我留言</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="Mc">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>留言板</span></a>
         </li>
 
 
@@ -383,8 +394,6 @@
                     </button>
 
 
-
-
                 </div>
 
                 <div class="modal fade" id="addBook" role="dialog">
@@ -470,6 +479,7 @@
                     </div>
 
                 </div>
+
 
                 <!--                修改信息-->
                 <form class="user" th:action="@{/updateUser}" method="post">
@@ -574,9 +584,9 @@
 
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 
-                                    <button class="btn btn-danger" data-dismiss="modal" >删除
+                                    <button class="btn btn-danger" data-dismiss="modal">删除
                                     </button>
-<!--                                    <a th:href="@{deleteStu/{id}(id=${info.id})}"  class="btn btn-danger">删除</a>-->
+                                    <!--                                    <a th:href="@{deleteStu/{id}(id=${info.id})}"  class="btn btn-danger">删除</a>-->
 
                                 </div>
 
@@ -622,7 +632,6 @@
                             </button>
                             <a class="btn btn-danger" th:href="@{deleteInfo/{id}(id=${info.id})}">删除</a>
                         </td>
-
 
                     </tr>
                     </tbody>

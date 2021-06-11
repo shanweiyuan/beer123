@@ -40,9 +40,20 @@
         where id = #{id}
     </delete>
 
+    <delete id="deleteMc"  parameterType="int">
+        delete
+        from page
+        where id = #{id}
+    </delete>
+
     <select id="selectAll" resultType="com.swy.pojo.User">
         select *
         from user
+    </select>
+
+    <select id="showInfo" resultType="com.swy.pojo.Page">
+        select *
+        from page
     </select>
 
 

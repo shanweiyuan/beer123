@@ -1,6 +1,7 @@
 package com.swy.controller;
 
 import com.swy.mapper.UserMapper;
+import com.swy.pojo.Page;
 import com.swy.pojo.User;
 import com.swy.service.MailService;
 import com.swy.vo.UserVo;
@@ -139,7 +140,7 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/deleteInfo/{id}", method = RequestMethod.GET)
-    public String deleteStu(@PathVariable("id")int id){
+    public String deleteInfo(@PathVariable("id")int id){
         userMapper.deleteInfo(id);
         return "redirect:/tables";
     }
@@ -165,11 +166,23 @@ public class UserController {
         return "redirect:/find.html";
     }
 
-    @GetMapping( "/tables")
-    public String selectTxt(Model model){
-        List<User> list = userMapper.selectAll();
+    @GetMapping( "/Mc")
+    public String ShowInfo(Model model){
+        List<Page> list = userMapper.showInfo();
         model.addAttribute("infos",list);
-        return "tables.html";
+        return "Mc";
     }
 
+    @GetMapping( "/McM")
+    public String ShowInfoMeg(Model model){
+        List<Page> list = userMapper.showInfo();
+        model.addAttribute("infos",list);
+        return "McM";
+    }
+
+    @RequestMapping(value = "/deleteMc/{id}", method = RequestMethod.GET)
+    public String deleteMc(@PathVariable("id")int id){
+        userMapper.deleteMc(id);
+        return "redirect:/McM";
+    }
 }
