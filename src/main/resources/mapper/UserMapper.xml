@@ -5,8 +5,8 @@
 <mapper namespace="com.swy.mapper.UserMapper">
 
     <insert id="insertUser" parameterType="com.swy.pojo.User">
-        insert into user (username,password,email)
-        values (#{username},#{password},#{email})
+        insert into user (username, password, email)
+        values (#{username}, #{password}, #{email})
     </insert>
 
     <select id="queryByEmail" resultType="com.swy.pojo.User">
@@ -17,8 +17,14 @@
 
 
     <insert id="AddUser" parameterType="com.swy.pojo.User">
-        insert into user (username,password,email)
-        values (#{username},#{password},#{email})
+        insert into user (username, password, email)
+        values (#{username}, #{password}, #{email})
+    </insert>
+
+
+    <insert id="addText" parameterType="com.swy.pojo.Page">
+        insert into page (user, email, titles, pages)
+        values (#{user},#{email},#{titles},#{pages})
     </insert>
 
     <update id="updateUser" parameterType="com.swy.pojo.User">
@@ -29,13 +35,15 @@
     </update>
 
     <delete id="deleteInfo" parameterType="int">
-        delete from user where id = #{id}
+        delete
+        from user
+        where id = #{id}
     </delete>
 
     <select id="selectAll" resultType="com.swy.pojo.User">
-        select * from user
+        select *
+        from user
     </select>
-
 
 
 </mapper>

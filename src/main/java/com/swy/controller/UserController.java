@@ -24,6 +24,13 @@ public class UserController {
     public UserMapper userMapper;
 
 
+    /**
+     * 发送邮箱
+     * @param email
+     * @param httpSession
+     * @param model
+     * @return
+     */
     @PostMapping("/sendEmail")
     public String sendEmail(String email, HttpSession httpSession, Model model) {
         if (mailService.sendMimeMail(email, httpSession)) {
@@ -36,6 +43,13 @@ public class UserController {
 
     }
 
+    /**
+     * 注册
+     * @param userVo
+     * @param session
+     * @param model
+     * @return
+     */
     @PostMapping("/regist")
     public String regist(UserVo userVo, HttpSession session, Model model) {
         if (mailService.registered(userVo, session)) {
@@ -44,10 +58,15 @@ public class UserController {
             model.addAttribute("msg","验证码错误");
             return "register.html";
         }
-
-
     }
 
+    /**
+     * 登录
+     * @param email
+     * @param password
+     * @param model
+     * @return
+     */
     @PostMapping("/login")
     public String login(String email, String password, Model model) {
 
@@ -63,7 +82,13 @@ public class UserController {
 //        return "redirect:/dashboard.html";
     }
 
-    //添加一个用户
+    /**
+     * 添加一个用户
+     * @param AddUsername
+     * @param AddEmail
+     * @param AddPassword
+     * @return
+     */
     @PostMapping("/addUser")
     public String addUser(@RequestParam("AddUsername") String AddUsername,
                           @RequestParam("AddEmail") String AddEmail,
@@ -77,7 +102,13 @@ public class UserController {
         return "redirect:/tables";
     }
 
-    //修改一个用户
+    /**
+     * 修改一个用户
+     * @param upUsername
+     * @param upEmail
+     * @param upPassword
+     * @return
+     */
     @PostMapping("/updateUser")
     public String updateUser(@RequestParam("upUsername") String upUsername,
                              @RequestParam("upEmail") String upEmail,
@@ -90,7 +121,11 @@ public class UserController {
         return "redirect:/tables";
     }
 
-    //显示所有学生成绩
+    /**
+     * 显示所有信息
+     * @param model
+     * @return
+     */
     @GetMapping( "/tables")
     public String selectAll(Model model){
         List<User> list = userMapper.selectAll();
@@ -98,11 +133,43 @@ public class UserController {
         return "tables.html";
     }
 
-    //删除学生信息
+    /**
+     * 删除学生信息
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/deleteInfo/{id}", method = RequestMethod.GET)
     public String deleteStu(@PathVariable("id")int id){
         userMapper.deleteInfo(id);
         return "redirect:/tables";
+    }
+
+    /**
+     * 上传信息
+     * @param user
+     * @param email
+     * @param titles
+     * @param pages
+     * @return
+     */
+    @PostMapping("/addText")
+    public String addText(@RequestParam("user") String user,
+                          @RequestParam("email") String email,
+                          @RequestParam("titles") String titles,
+                          @RequestParam("pages") String pages){
+        log.info("AddUsername:{}",user);
+        log.info("password:{}",email);
+        log.info("email:{}",titles);
+
+        userMapper.addText(user,email,titles,pages);
+        return "redirect:/find.html";
+    }
+
+    @GetMapping( "/tables")
+    public String selectTxt(Model model){
+        List<User> list = userMapper.selectAll();
+        model.addAttribute("infos",list);
+        return "tables.html";
     }
 
 }

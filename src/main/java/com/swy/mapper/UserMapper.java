@@ -27,16 +27,18 @@ public interface UserMapper {
 
     /**
      * 添加信息
+     * @param username
      * @param email
-     * @return
+     * @param password
      */
     void AddUser(String username, String email, String password);
 
 
     /**
      * 更新信息
+     * @param username
      * @param email
-     * @return
+     * @param password
      */
     void updateUser(String username, String email, String password);
 
@@ -46,10 +48,20 @@ public interface UserMapper {
      */
     List<User> selectAll();
 
+
     /**
      * 删除信息
+     * @param id
      * @return
      */
     int deleteInfo(int id);
 
+    /**
+     * 提交留言
+     * @param user
+     * @param email
+     * @param titles
+     * @param pages
+     */
+    void addText(String user, String email,String titles,String pages);
 }
