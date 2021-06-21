@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>UserController</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="PR.prettyPrint()">
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                beer
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/YeDaxia/JApiDocs" target="_blank">GitHub</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">V1.0<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                            <li><a href="../beer.iml/index.html">beer.iml</a></li>
+                            <li><a href="../HELP.md/index.html">HELP.md</a></li>
+                            <li><a href="../mvnw/index.html">mvnw</a></li>
+                            <li><a href="../mvnw.cmd/index.html">mvnw.cmd</a></li>
+                            <li><a href="../pom.xml/index.html">pom.xml</a></li>
+                            <li><a href="../readme.md/index.html">readme.md</a></li>
+                            <li><a href="../src/index.html">src</a></li>
+                            <li><a href="../target/index.html">target</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="book with-summary">
+    <div class="book-summary">
+<div class="search-box form-group">
+    <input type="text" class="form-control" id="inputSearch" placeholder="搜索接口">
+    <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+</div>
+<div id="accordion" class="catalog">
+        <div class="panel">
+            <div id="heading0" data-parent="#accordion" class="catalog-title" data-toggle="collapse"
+                 aria-expanded="true" data-target="#collapse0" aria-controls="collapse0">
+                <i class="glyphicon glyphicon-align-justify"></i> UserController
+            </div>
+            <div id="collapse0" class="collapse in " aria-labelledby="heading0">
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#sendEmail">
+                        发送邮箱获取验证码
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#regist">
+                        注册一位用户
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#login">
+                        登录验证
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#addUser">
+                        添加一个用户
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#updateUser">
+                        修改一个用户
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#selectAll">
+                        显示用户所有信息
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#deleteInfo">
+                        删除学生信息
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#addText">
+                        添加留言
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#ShowInfo">
+                        前端页面展示留言信息
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#ShowInfoMeg">
+                        控制页面展示全部留言信息
+                    </a>
+                    <a class="catalog-item" href="com_swy_controller_UserController.html#deleteMc">
+                        删除一条留言信息
+                    </a>
+            </div>
+        </div>
+</div>    </div>
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+                <div class="d-flex justify-content-between">
+                    <a class="header-menu toggle-catalog" href="javascript:void(0)"><i
+                            class="glyphicon glyphicon-align-justify"></i> 目录</a>
+                </div>
+            </div>
+            <div class="page-wrapper">
+                <div class="page-inner">
+                    <div class="action-list">
+                        <div class="action-item">
+<h2 id="sendEmail"><a href="#">发送邮箱获取验证码 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/sendEmail</code>
+        <span class="label label-default">POST</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="regist"><a href="#">注册一位用户 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/regist</code>
+        <span class="label label-default">POST</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>username</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>code</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td>验证码</td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="login"><a href="#">登录验证 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/login</code>
+        <span class="label label-default">POST</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="addUser"><a href="#">添加一个用户 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/addUser</code>
+        <span class="label label-default">POST</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>AddUsername</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>AddEmail</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>AddPassword</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="updateUser"><a href="#">修改一个用户 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/updateUser</code>
+        <span class="label label-default">POST</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>upUsername</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>upEmail</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>upPassword</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="selectAll"><a href="#">显示用户所有信息 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/tables</code>
+        <span class="label label-default">GET</span>
+</p>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="deleteInfo"><a href="#">删除学生信息 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/deleteInfo/{id}</code>
+        <span class="label label-default">GET</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="addText"><a href="#">添加留言 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/addText</code>
+        <span class="label label-default">POST</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>titles</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>pages</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="ShowInfo"><a href="#">前端页面展示留言信息 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/Mc</code>
+        <span class="label label-default">GET</span>
+</p>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="ShowInfoMeg"><a href="#">控制页面展示全部留言信息 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/McM</code>
+        <span class="label label-default">GET</span>
+</p>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                        <div class="action-item">
+<h2 id="deleteMc"><a href="#">删除一条留言信息 </a></h2>
+<p><strong>请求URL</strong></p>
+<p>
+    <code>/deleteMc/{id}</code>
+        <span class="label label-default">GET</span>
+</p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
+    <p><strong>返回结果</strong></p>
+    <pre class="prettyprint lang-json">string{}</pre>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+<script>
+
+    var search_source_data = [
+            {name: 'UserController.发送邮箱获取验证码', url: 'com_swy_controller_UserController.html#sendEmail'},
+            {name: 'UserController.注册一位用户', url: 'com_swy_controller_UserController.html#regist'},
+            {name: 'UserController.登录验证', url: 'com_swy_controller_UserController.html#login'},
+            {name: 'UserController.添加一个用户', url: 'com_swy_controller_UserController.html#addUser'},
+            {name: 'UserController.修改一个用户', url: 'com_swy_controller_UserController.html#updateUser'},
+            {name: 'UserController.显示用户所有信息', url: 'com_swy_controller_UserController.html#selectAll'},
+            {name: 'UserController.删除学生信息', url: 'com_swy_controller_UserController.html#deleteInfo'},
+            {name: 'UserController.添加留言', url: 'com_swy_controller_UserController.html#addText'},
+            {name: 'UserController.前端页面展示留言信息', url: 'com_swy_controller_UserController.html#ShowInfo'},
+            {name: 'UserController.控制页面展示全部留言信息', url: 'com_swy_controller_UserController.html#ShowInfoMeg'},
+            {name: 'UserController.删除一条留言信息', url: 'com_swy_controller_UserController.html#deleteMc'},
+    ];
+
+
+
+    $('.toggle-catalog').click(function () {
+        $('.book').toggleClass('with-summary');
+    });
+
+    $('#inputSearch').autocomplete({hint: false}, [
+        {
+            source: function (query, callback) {
+                var result = [];
+                for(var i = 0; i !== search_source_data.length; i++){
+                    if(search_source_data[i].name.indexOf(query) !== -1){
+                        result.push(search_source_data[i]);
+                    }
+                }
+                callback(result);
+            },
+            displayKey: 'name',
+            templates: {
+                suggestion: function (suggestion) {
+                    return suggestion.name;
+                }
+            }
+        }
+    ]).on('autocomplete:selected', function (event, suggestion, dataset, context) {
+        self.location = suggestion.url;
+    });
+</script>
+</body>
+</html>

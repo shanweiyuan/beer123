@@ -26,7 +26,7 @@ public class UserController {
 
 
     /**
-     * 发送邮箱
+     * 发送邮箱获取验证码
      * @param email
      * @param httpSession
      * @param model
@@ -45,7 +45,7 @@ public class UserController {
     }
 
     /**
-     * 注册
+     * 注册一位用户
      * @param userVo
      * @param session
      * @param model
@@ -62,7 +62,7 @@ public class UserController {
     }
 
     /**
-     * 登录
+     * 登录验证
      * @param email
      * @param password
      * @param model
@@ -123,7 +123,7 @@ public class UserController {
     }
 
     /**
-     * 显示所有信息
+     * 显示用户所有信息
      * @param model
      * @return
      */
@@ -146,7 +146,7 @@ public class UserController {
     }
 
     /**
-     * 上传信息
+     * 添加留言
      * @param user
      * @param email
      * @param titles
@@ -166,6 +166,11 @@ public class UserController {
         return "redirect:/find.html";
     }
 
+    /**
+     * 前端页面展示留言信息
+     * @param model
+     * @return
+     */
     @GetMapping( "/Mc")
     public String ShowInfo(Model model){
         List<Page> list = userMapper.showInfo();
@@ -173,6 +178,11 @@ public class UserController {
         return "Mc";
     }
 
+    /**
+     * 控制页面展示全部留言信息
+     * @param model
+     * @return
+     */
     @GetMapping( "/McM")
     public String ShowInfoMeg(Model model){
         List<Page> list = userMapper.showInfo();
@@ -180,6 +190,11 @@ public class UserController {
         return "McM";
     }
 
+    /**
+     * 删除一条留言信息
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/deleteMc/{id}", method = RequestMethod.GET)
     public String deleteMc(@PathVariable("id")int id){
         userMapper.deleteMc(id);
