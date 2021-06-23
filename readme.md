@@ -89,15 +89,75 @@ http://localhost:8085
 
 
 
-## 使用步骤
+# Ui
 
-### 1.点击右上角登录
+## 页面展示
 
-### 2.点击注册 填写你的邮箱
+### 1.页面（点击右上角登录）
 
-### 3.填进刚刚发送的验证码进行注册
+![index](readme.assets/index.png)
 
-### 4.进入页面后 可以
+
+
+### 2.登录页面
+
+![login](readme.assets/login.png)
+
+
+
+### 3.点击注册（保持电脑联网）
+
+![email](readme.assets/email.png)
+
+
+
+### 4.注册页面
+
+![re](readme.assets/re.png)
+
+
+
+### 5.首页（首页全是固定数据）
+
+![shouye](readme.assets/shouye.png)
+
+
+
+### 6.用户管理
+
+![userInfo](readme.assets/userInfo.png)
+
+
+
+### 7.新增用户
+
+![userAdd](readme.assets/userAdd.png)
+
+
+
+### 8.修改用户信息
+
+![userC](readme.assets/userC.png)
+
+
+
+### 9.留言板
+
+![liuyanbang](readme.assets/liuyanbang.png)
+
+
+
+### 10.写留言
+
+![liuyan](readme.assets/liuyan.png)
+
+
+
+### 11.留言管理
+
+![liuyanInfo](readme.assets/liuyanInfo.png)
+
+
 
 
 
