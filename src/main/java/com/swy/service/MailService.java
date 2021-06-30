@@ -117,7 +117,7 @@ public class MailService {
         if(!user.getPassword().equals(password)){
             return false;
         }
-        System.out.println("登录成功:数据库密码是："+user.getPassword());
+        System.out.println("登录成功:账号密码是："+user.getPassword());
         return true;
     }
 }
